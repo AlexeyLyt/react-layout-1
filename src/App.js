@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Game from './components/Calc';
+import Navigation from './components/TaskMain/Navigation';
+import FirstSection from './components/TaskMain/FirstSection';
+import SecondSection from './components/TaskMain/SecondSection';
+import ThirdSection from './components/TaskMain/ThirdSection';
+import FourthSection from './components/TaskMain/FourthSection';
+import FifthSection from './components/TaskMain/FifthSection';
+import Footer from './components/TaskMain/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+        <FifthSection />
+      <Footer />
     </div>
   );
 }
