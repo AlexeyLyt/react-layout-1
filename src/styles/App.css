@@ -44,6 +44,15 @@ body {
   }
 }
 
+.nav-link a {
+  color: white;
+}
+
+.nav-link a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .nav-1 {
     -webkit-box-ordinal-group: 3;
@@ -1585,5 +1594,111 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.form-layout {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-layout .container .main-row .first-col {
+  padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  .form-layout .container .main-row .first-col {
+    padding-right: 15px;
+  }
+}
+
+.form-layout .container .main-row .first-col h1 {
+  font-weight: 200;
+  font-size: 24px;
+  color: #3B4256;
+  padding: 25px 0;
+  margin-bottom: 0;
+  border-bottom: 2px solid #DDE1E6;
+}
+
+.form-layout .container .main-row .first-col .text {
+  padding-top: 65px;
+  padding-right: 100px;
+}
+
+.form-layout .container .main-row .second-col {
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .form-layout .container .main-row .second-col {
+    padding-left: 15px;
+    margin-top: 20px;
+  }
+}
+
+.form-layout .container .main-row .second-col .variant {
+  border-bottom: 2px solid #DDE1E6;
+}
+
+.form-layout .container .main-row .second-col .variant .desktop,
+.form-layout .container .main-row .second-col .variant .mobile {
+  display: inline-block;
+  font-size: 16px;
+  padding: 26px 0;
+  color: #848E99;
+  font-weight: 500;
+}
+
+.form-layout .container .main-row .second-col .variant .desktop {
+  margin-right: 30px;
+  color: #3B4256;
+  border-bottom: 2px solid #0C49CD;
+}
+
+@media (max-width: 768px) {
+  .form-layout .container .main-row .second-col .variant .desktop {
+    border-bottom: none;
+    color: #848E99;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-layout .container .main-row .second-col .variant .mobile {
+    color: #3B4256;
+    border-bottom: 2px solid #0C49CD;
+  }
+}
+
+.form-layout .container .main-row .second-col .main-form {
+  padding-top: 65px;
+}
+
+.form-layout .container .main-row .second-col .main-form .form-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-layout .container .main-row .second-col .main-form .form-box .mb-3 {
+  width: 100%;
+}
+
+.form-layout .container .main-row .second-col .main-form .form-box .mb-3 .custom-control {
+  padding-bottom: 15px;
+}
+
+.form-layout .container .main-row .second-col .main-form .form-box .mb-3 .custom-control .custom-control-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 35px;
+  padding-left: 15px;
+}
+
+.form-layout .container .main-row .second-col .main-form .form-box .mb-3 .custom-control .custom-control-label::after, .form-layout .container .main-row .second-col .main-form .form-box .mb-3 .custom-control .custom-control-label::before {
+  width: 24px;
+  height: 24px;
+}
+
+.form-layout .container .main-row .second-col .main-form .form-box .mb-3 .custom-control .custom-control-label::after {
+  left: -24.51px;
 }
 /*# sourceMappingURL=App.css.map */

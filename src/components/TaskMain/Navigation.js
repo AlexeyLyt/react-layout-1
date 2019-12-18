@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+import { Link } from 'react-router-dom'
+
 import OtherImg from '../../images/Other.svg'
 import SearchImg from '../../images/search.svg'
 import AvatarImg from '../../images/avatar.svg'
@@ -18,10 +20,10 @@ function Navigation() {
                 <Row className="navigation-row">
                     <Col className="nav-1">
                         <Nav.Item>
-                            <Nav.Link className="other-projects" eventKey="1" href="#/home">
+                            <Link to="/" className="nav-link other-projects">
                             <img src={OtherImg} alt=""/>
                                 Другие сайты государства
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                     </Col>
                     <Col className="nav-2">
@@ -32,9 +34,9 @@ function Navigation() {
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="3">
+                            <Link to="/t" className="nav-link">
                                 Москва
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link eventKey="3">
@@ -55,6 +57,7 @@ function Navigation() {
                 </Row>
             </Container>
         </Nav>
+
     );
 }
 
