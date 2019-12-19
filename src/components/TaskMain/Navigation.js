@@ -44,7 +44,7 @@ function Navigation() {
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="login-nav">
-                            <img src={AvatarImg} className='nav-avatar-img'/>
+                            <img src={AvatarImg} className='nav-avatar-img' alt=''/>
                             <NavDropdown className="nav-user-dropdown" title="Личный кабинет" id="nav-dropdown">
                                 <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>

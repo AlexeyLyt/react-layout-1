@@ -141,6 +141,9 @@ body {
 
 .first-section-container {
   padding-top: 20px;
+  .second-row {
+    margin: 0;
+  }
 }
 
 .main-logo {
@@ -350,6 +353,7 @@ body {
         }
         p {
           font-size: 14px;
+          padding-right: 15px;
         }
       }
     }
@@ -370,6 +374,9 @@ body {
       img {
         width: 70px !important;
         height: 70px !important;
+        // object-fit: cover;
+        // position: relative;
+        // top: -10px;
       }
       .login {
         width: 100%;
@@ -383,6 +390,7 @@ body {
           font-size: 14px;
           padding: 0;
           margin: 0;
+          padding-right: 15px;
         }
         .box-buttons-login {
           display: flex;
@@ -843,7 +851,36 @@ body {
   font-family: 'Roboto', sans-serif;
 
   .container {
+    
+    .second-row {
+      
+      .form-box {
+        width: 100%;
 
+        .form-group {
+
+          .input-telephone {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          }
+          .text-muted {
+            color: red !important;
+            font-weight: bold;
+          }
+        }
+      }
+    }
     .main-row {
 
       .first-col {
@@ -925,12 +962,12 @@ body {
                     height: 24px;
                   }
                   &::after {
-                    left: -24.51px;
+                    left: -24px;
                   }
-                  &::before {
-                    // background-color: #F4F7FB;
-                    // border: #DDE1E6 solid 1px;
-                  }
+                  // &::before {
+                  //   // background-color: #F4F7FB;
+                  //   // border: #DDE1E6 solid 1px;
+                  // }
                 }
               }
             }

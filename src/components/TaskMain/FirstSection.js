@@ -31,8 +31,8 @@ function FirstSection() {
                         </div>
                     </Col>
                     <Col className="second-col">
-                        <a href="">Каталог услуг</a>
-                        <a href="">Оплата</a>
+                        <a href="/#">Каталог услуг</a>
+                        <a href="/#">Оплата</a>
                     </Col>
                 </Row>
 
@@ -44,11 +44,11 @@ function FirstSection() {
                         id="input-group-dropdown-1"
                         className="search-form-dropdown"
                     >
-                        <Dropdown.Item href="#">Action</Dropdown.Item>
-                        <Dropdown.Item href="#">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#">Something else here</Dropdown.Item>
+                        <Dropdown.Item href="/#">Action</Dropdown.Item>
+                        <Dropdown.Item href="/#">Another action</Dropdown.Item>
+                        <Dropdown.Item href="/#">Something else here</Dropdown.Item>
                         <Dropdown.Divider />
-                        <Dropdown.Item href="#">Separated link</Dropdown.Item>
+                        <Dropdown.Item href="/#">Separated link</Dropdown.Item>
                     </DropdownButton>
                     <FormControl className="search-form-input" aria-describedby="basic-addon1"
                         placeholder="Введите запрос">
@@ -62,7 +62,7 @@ function FirstSection() {
 
                 <Row className="second-row">
                     <Col>
-                        <img src={LoginImg} />
+                        <div className="img-carousel"><img src={LoginImg} alt=''/></div>
                         <Carousel
                             className="first-section-carousel"
                             interval={0}
@@ -93,7 +93,7 @@ function FirstSection() {
                     </Col>
 
                     <Col className="second-col">
-                        <img src={LoginImg} />
+                        <div className="img-carousel"><img src={LoginImg} alt=''/></div>
                         <div className="login">
                             <h3>Вход в личный кабинет</h3>
                             <p>Войдите или зарегистрируйтесь, чтобы получить полный доступ к электронным госуслугам</p>

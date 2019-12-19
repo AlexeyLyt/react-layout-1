@@ -1,16 +1,28 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-// import CryptoList from './CryptoList';  // or whatever the location is
-// import Currency from './Currency'; // or whatever the location is
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import App from './App';
+import FormLayout from './components/Task2/FormLayout'
 
-import Navigation from './components/TaskMain/Navigation'
-import Calc from './components/TaskExample/Calc'
+export const routing = (
+  <Router>
+    <div>
+      <Route exact path="/" component={App} />
+      <Route path="/t" component={FormLayout} />
+    </div>
+  </Router>
+)
 
-export default () => (
-<BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Navigation}/>
-      <Route path="/about" component={Calc}/>
-    </Switch>
-</BrowserRouter>
-);
+// export const routing = [
+//   {
+//     path: '/',
+//     component: App,
+//     title: 'Главная страница'
+//   },
+//   {
+//     path: '/t',
+//     component: FormLayout,
+//     title: 'Чекбоксы'
+//   }
+// ]
+
+export default routing;

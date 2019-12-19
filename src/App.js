@@ -1,5 +1,4 @@
 import React from 'react';
-// import Game from './components/Calc';
 import Navigation from './components/TaskMain/Navigation';
 import FirstSection from './components/TaskMain/FirstSection';
 import SecondSection from './components/TaskMain/SecondSection';

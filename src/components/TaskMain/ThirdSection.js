@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import {Accordion, Card} from 'react-bootstrap'
 
 import Eagle from '../../images/eagle_heller_small_black.svg'

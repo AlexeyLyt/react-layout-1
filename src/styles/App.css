@@ -150,6 +150,10 @@ body {
   padding-top: 20px;
 }
 
+.first-section-container .second-row {
+  margin: 0;
+}
+
 .main-logo {
   height: 48px;
   width: 48px;
@@ -416,6 +420,7 @@ body {
 
 .first-section-carousel .carousel-inner .carousel-item .carousel-caption p {
   font-size: 14px;
+  padding-right: 15px;
 }
 
 .first-section-container .second-row {
@@ -455,6 +460,7 @@ body {
   font-size: 14px;
   padding: 0;
   margin: 0;
+  padding-right: 15px;
 }
 
 .first-section-container .second-row .col .login .box-buttons-login {
@@ -1600,6 +1606,34 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.form-layout .container .second-row .form-box {
+  width: 100%;
+}
+
+.form-layout .container .second-row .form-box .form-group .input-telephone {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.form-layout .container .second-row .form-box .form-group .text-muted {
+  color: red !important;
+  font-weight: bold;
+}
+
 .form-layout .container .main-row .first-col {
   padding-right: 0;
 }
@@ -1699,6 +1733,6 @@ body {
 }
 
 .form-layout .container .main-row .second-col .main-form .form-box .mb-3 .custom-control .custom-control-label::after {
-  left: -24.51px;
+  left: -24px;
 }
 /*# sourceMappingURL=App.css.map */
