@@ -3,7 +3,7 @@
       @media (max-width: 1300px) {@content};
   } @else if $media == 1200 {
       @media (max-width: 1200px) {@content};
-  } @else if $media == 1200m {
+  } @else if $media == 12002 {
       @media (min-width: 1200px) {@content};
   } @else if $media == 992 {
       @media (max-width: 992px) {@content};
@@ -26,6 +26,12 @@ body {
 
 #root {
   overflow: hidden;
+}
+
+.container {
+  @include screen(12002) {
+    max-width: 1270px !important;
+  }
 }
 
 // Меню
@@ -426,37 +432,46 @@ body {
   min-height: 550px; // высота первой секции
   background-color: #F4F7FB;
 
-  .first-row {
+  .second-section-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  // .first-row {
     // flex-wrap: unset;
 
-    .first-col {
-      padding-right: 0 !important;
-      @include screen(1200) {
-        padding-right: 15px !important;
-      }
-    }
-    .second-col {
-      padding-left: 0 !important;
-      @include screen(1200) {
-        padding-left: 15px !important;
-      }
-    }
+    // .first-col {
+    //   padding-right: 0 !important;
+    //   @include screen(1200) {
+    //     padding-right: 15px !important;
+    //   }
+    // }
+    // .second-col {
+    //   padding-left: 0 !important;
+    //   @include screen(1200) {
+    //     padding-left: 15px !important;
+    //   }
+    // }
 
-    .first-col,
-    .second-col {
-      display: flex;
-      flex-wrap: wrap;
-      @include screen(1200) {
-        justify-content: center;
-      }
+    // .first-col,
+    // .second-col {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   @include screen(1200) {
+    //     justify-content: center;
+    //   }
+
+    .row-in-row {
+      width: 100%;
 
       .item-flex {
         display: flex;
         max-height: 130px;
-        min-width: 525px;
+        width: 49%;
         padding: 30px;
         background-color: white;
-        margin: 0 30px 30px 0;
+        margin: 0 5px 30px 5px;
         cursor: pointer;
         @include screen(1200) {
           width: 100%;
@@ -484,14 +499,15 @@ body {
           }
         }
       }
-      .item-flex-2 {
-        margin: 0 0 30px 0;
-      }
-      .item-flex-2-last {
-        width: 100%;
-      }
+      // .item-flex-2 {
+      //   margin: 0 0 30px 0;
+      // }
+      // .item-flex-2-last {
+      //   width: 100%;
+      // }
     }
-  }
+  // }
+  
 
   .second-row {
     padding: 0 15px;
@@ -516,6 +532,18 @@ body {
 .second-section-container {
   position: relative;
   top: -65px;
+  
+  .first-row {
+
+    .first-col {
+
+      margin-right: 30px;
+      @include screen(1200) {
+        margin-right: 0;
+      }
+    }
+  }
+}
 }
 
 // .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -976,4 +1004,56 @@ body {
       }
     }
   }
+}
+
+// ***** Task3 - Интерактивная карта *****
+
+.map {
+  .tooptips {
+    // margin-top: 25px;
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    display: none;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    font-weight: bold;
+    &::after {
+      
+    }
+  }
+  .container-map {
+
+    .first-row {
+
+      .firts-col {
+        text-align: center;
+
+        .css-2b097c-container {
+          margin-top: 30px;
+          margin-bottom: 30px;
+
+          .main-map {
+
+            g {
+
+              path {
+                fill: #F4F7FB !important;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+.my-class {
+  fill: wheat !important;
+}
+
+path {
+  fill: #d0d0d0  !important;
 }

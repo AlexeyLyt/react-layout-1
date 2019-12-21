@@ -28,13 +28,13 @@ function Navigation() {
                     </Col>
                     <Col className="nav-2">
                         <Nav.Item>
-                            <Nav.Link className="search-nav" eventKey="2" title="Item">
+                            <Link to="/interactive-map" className="nav-link search-nav" title="Item">
                                 <img src={SearchImg} alt=""/>
                                 Найти
-                            </Nav.Link>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Link to="/t" className="nav-link">
+                            <Link to="/form-layout" className="nav-link">
                                 Москва
                             </Link>
                         </Nav.Item>
