@@ -1728,20 +1728,78 @@ body {
   text-align: center;
 }
 
-.map .container-map .first-row .firts-col .css-2b097c-container {
+.map .container-map .first-row .firts-col .map-container {
+  position: relative;
+  margin-top: 25px;
+}
+
+.map .container-map .first-row .firts-col .map-container .select-block {
+  position: absolute;
+  width: 30%;
+  text-align: left;
+}
+
+.map .container-map .first-row .firts-col .map-container .select-block .css-2b097c-container {
   margin-top: 30px;
   margin-bottom: 30px;
+  z-index: 10;
 }
 
-.map .container-map .first-row .firts-col .css-2b097c-container .main-map g path {
-  fill: #F4F7FB !important;
+.map .container-map .first-row .firts-col .map-container .select-block h1 {
+  font-weight: 200;
+  font-size: 32px;
 }
 
-.my-class {
+.css-2b097c-container {
+  width: 70%;
+}
+
+@media (max-width: 992px) {
+  .css-2b097c-container {
+    width: 100%;
+  }
+}
+
+.css-yk16xz-control {
+  background-color: #d0d0d061 !important;
+}
+
+.css-1wa3eu0-placeholder {
+  color: #3B4256 !important;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .css-1wa3eu0-placeholder {
+    font-size: 13px;
+  }
+}
+
+.css-1hwfws3 {
+  padding: 6px !important;
+}
+
+.css-1okebmr-indicatorSeparator {
+  background-color: none;
+}
+
+@media (max-width: 992px) {
+  .main-map {
+    width: 100%;
+  }
+}
+
+.main-map path {
+  fill: #d0d0d0  !important;
+  cursor: pointer !important;
+}
+
+.main-map .my-class {
   fill: wheat !important;
 }
 
-path {
-  fill: #d0d0d0  !important;
+.main-map .on-select {
+  fill: red !important;
 }
 /*# sourceMappingURL=App.css.map */
