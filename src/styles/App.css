@@ -1584,6 +1584,7 @@ body {
 
 .form-layout .container .second-row .form-box {
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .form-layout .container .second-row .form-box .form-group .input-telephone {

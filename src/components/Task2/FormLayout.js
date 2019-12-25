@@ -123,10 +123,11 @@ function FormLayout() {
 
 // eslint-disable-next-line
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+
 const validateForm = (errors) => {
     let valid = true;
     Object.values(errors).forEach(
-        (val) => val.length > 0 && (valid = false)
+        (val) => val.length > 0 && (valid = false) 
     );
     return valid;
 }
@@ -152,6 +153,9 @@ class Register extends React.Component {
         event.preventDefault();
         const { name, value } = event.target;
         let errors = this.state.errors;
+        let d = document.querySelector('.main-form-box')
+        let a = d.querySelectorAll('.main-input')
+        let button = document.querySelector('.form-submit')
 
         switch (name) {
             case 'login':
@@ -159,8 +163,8 @@ class Register extends React.Component {
                     value.length < 5
                         ? 'В имени должно быть не менее 5 символов'
                         : !isNaN(value)
-                            ? 'Имя не может состоять только из цифр'
-                            : '';
+                        ? 'Имя не может состоять только из цифр'
+                        : '';
                 break;
             case 'email':
                 errors.email =
@@ -172,6 +176,8 @@ class Register extends React.Component {
                 errors.password =
                     value.length < 8
                         ? 'Пароль должен содержать не менее 8 символов!'
+                        : ''
+                        ? button.setAttribute('disabled', '')
                         : '';
                 break;
             case 'telephone':
@@ -185,33 +191,55 @@ class Register extends React.Component {
         }
 
         this.setState({ errors, [name]: value });
+
+        a.forEach(obj => {
+            if(obj.value === '' || validateForm(this.state.errors) === false) {
+                // console.log('пусто');
+                button.setAttribute('disabled', '')
+            }else if(obj.value && validateForm(this.state.errors)) {
+                // console.log('не пусто');
+                button.removeAttribute('disabled', '')
+            }
+        })
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        if (validateForm(this.state.errors)) {
-            console.info('Valid Form')
-        } else {
-            console.error('Invalid Form')
-        }
-    }
+    // handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     let button = document.querySelector('.form-submit')
+
+    //     if (validateForm(this.state.errors)) {
+    
+    //     } else {
+            
+    //     }
+    // }
+
+    // handleFocus = (event) => {
+    //     event.preventDefault();
+    //     let button = document.querySelector('.form-submit')
+    //     if (validateForm(this.state.errors)) {
+    //         console.info('Valid Form')
+    //     } else {
+    //         console.error('Invalid Form')
+    //     }
+    // }
 
     render() {
         const { errors } = this.state;
         return (
             <Row className='second-row'>
 
-                <Form onSubmit={this.handleSubmit} className="form-box" noValidate>
+                <Form className="form-box main-form-box"> {/*button.setAttribute('disabled')*/}
                     <Form.Group>
                         <Form.Label htmlFor="login">Ваш логин</Form.Label>
-                        <Form.Control onChange={this.handleChange} name="login" type="text" placeholder="Введите логин" noValidate />
+                        <Form.Control className="main-input" onChange={this.handleChange} name="login" type="text" placeholder="Введите логин" noValidate />
                         {errors.login.length > 0 &&
                             <Form.Text className="text-muted">{errors.login}</Form.Text>}
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Label htmlFor="email">Ваш email</Form.Label>
-                        <Form.Control onChange={this.handleChange} name="email" type="email" placeholder="Введите email" noValidate />
+                        <Form.Control className="main-input" onChange={this.handleChange} name="email" type="email" placeholder="Введите email" noValidate />
                         {errors.email.length > 0 &&
                             <Form.Text className="text-muted">{errors.email}</Form.Text>}
                     </Form.Group>
@@ -219,22 +247,14 @@ class Register extends React.Component {
                     <Form.Group>
                         <Form.Label htmlFor="telephone">Ваш телефон</Form.Label><br></br>
                         <IMaskInput
-                            className='input-telephone'
+                            className='input-telephone main-input'
                             name="telephone"
                             mask='+{7} (000) 000-00-00'
                             onChange={this.handleChange}
                             radix="."
                             
                             unmask={true} // true|false|'typed'
-                            onAccept={
-                                // depending on prop above first argument is
-                                // `value` if `unmask=false`,
-                                // `unmaskedValue` if `unmask=true`,
-                                // `typedValue` if `unmask='typed'`
-                                (value, mask) => console.log(value)
-                            }
                             // ...and more mask props in a guide
-
                             // input props also available
                             placeholder='Введите телефон'
                         />
@@ -244,7 +264,7 @@ class Register extends React.Component {
 
                     <Form.Group>
                         <Form.Label htmlFor="password">Пароль</Form.Label>
-                        <Form.Control onChange={this.handleChange} name="password" type="password" placeholder="Введите пароль" noValidate />
+                        <Form.Control className="main-input" onChange={this.handleChange} name="password" type="password" placeholder="Введите пароль" noValidate />
                         {errors.password.length > 0 &&
                             <Form.Text className="text-muted">{errors.password}</Form.Text>}
                     </Form.Group>
@@ -253,7 +273,7 @@ class Register extends React.Component {
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" className="form-submit" type="submit" disabled>
                         Submit
                     </Button>
                 </Form>
